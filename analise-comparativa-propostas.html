@@ -1,65 +1,128 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>Análise Comparativa de Propostas</title>
+<div class="titulo">Análise Comparativa de Propostas de Fornecedores</div>
 
-<style>
-body { font-family: Arial; background:#f5f5f5; padding:30px; }
-.card {
-  max-width:700px; margin:auto; background:white;
-  padding:20px; border-radius:16px;
-  box-shadow:0 4px 14px rgba(0,0,0,0.08);
-}
-.titulo { font-size:20px; font-weight:bold; margin-bottom:15px; }
-.prompt {
-  background:#fafafa; border:1px solid #ddd;
-  border-radius:10px; padding:15px;
-  white-space:pre-wrap; margin-bottom:15px;
-}
-button {
-  background:#FE7BA9; color:white;
-  border:none; padding:10px 16px;
-  border-radius:10px; cursor:pointer; font-weight:bold;
-}
-</style>
-</head>
+<div class="prompt" id="texto">Você é um especialista sênior em Strategic Sourcing e Procurement.
 
-<body>
+Vou anexar propostas comerciais de diferentes fornecedores referentes a um mesmo processo de sourcing.
 
-<div class="card">
-  <div class="titulo">Análise Comparativa de Propostas</div>
+Sua tarefa é analisar as propostas e gerar um Mapa Comparativo Profissional, seguindo as melhores práticas de procurement estratégico.
 
-  <div class="prompt" id="texto">
-Você é um especialista sênior em Strategic Sourcing e Procurement.
+Considere que o objetivo é apoiar uma decisão de award baseada em valor total, TCO, não apenas preço.
 
-Analise propostas comerciais de diferentes fornecedores referentes a um mesmo processo de sourcing.
+Etapa 1: Normalização das Propostas
 
-Gere um mapa comparativo profissional considerando:
+Leia todos os documentos anexados e identifique:
 
-- Preço total e unitário
-- Condições comerciais
-- Escopo técnico
-- Serviços incluídos e excluídos
-- Garantias
-- Riscos
-- Prazo de entrega
+Nome do fornecedor
+Escopo ofertado
+Itens cotados
+Preços
+Condições comerciais
+Prazo de entrega
+Condições de pagamento
+Garantias
+Serviços incluídos
+Exclusões
+Premissas
+Validade da proposta
 
-Inclua avaliação qualitativa, análise de TCO, riscos identificados e oportunidades de negociação.
+Normalize as informações para permitir comparação direta.
 
-Finalize com recomendação de award e resumo executivo.
-  </div>
+Se houver lacunas ou ambiguidades, liste como:
 
-  <button onclick="copiar()">Copiar prompt</button>
-</div>
+"Pontos que precisam de esclarecimento"
 
-<script>
-function copiar() {
-  const texto = document.getElementById("texto").innerText;
-  navigator.clipboard.writeText(texto);
-  alert("Prompt copiado!");
-}
-</script>
+Etapa 2: Mapa Comparativo Side-by-Side
 
-</body>
-</html>
+Monte uma tabela comparativa contendo:
+
+Condições Comerciais:
+Preço Total
+Preço Unitário
+Impostos
+Frete
+Condição de pagamento
+Reajuste
+Validade
+Lead time
+
+Escopo Técnico:
+Aderência ao escopo
+Diferenças técnicas
+Serviços incluídos
+Serviços excluídos
+Garantias
+Riscos identificados
+
+Avaliação Qualitativa:
+
+Avalie cada fornecedor de 1 a 5 em:
+
+Competitividade de preço
+Aderência técnica
+Risco comercial
+Prazo de entrega
+Clareza da proposta
+
+Explique brevemente cada nota.
+
+Análise de TCO:
+
+Sempre que possível estime:
+
+Custo total de aquisição
+Custos adicionais potenciais
+Riscos financeiros
+Custos logísticos
+Custos operacionais associados
+
+Explique as premissas utilizadas.
+
+Etapa 3: Insights Estratégicos
+
+Apresente:
+
+Principais diferenças entre fornecedores
+Diferenças relevantes de preço
+Diferenças de escopo
+Diferenças de risco
+Diferenças comerciais
+
+Liste os riscos identificados:
+
+Riscos técnicos
+Riscos comerciais
+Riscos de prazo
+Riscos contratuais
+
+Identifique oportunidades de negociação:
+
+Onde há espaço para redução de preço
+Onde condições podem ser melhoradas
+Onde há desalinhamento competitivo
+
+Etapa 4: Recomendação de Award
+
+Apresente:
+
+Ranking dos fornecedores
+Melhor proposta justificada
+Melhor proposta em preço
+Melhor proposta em valor, TCO
+Recomendação final
+
+Formato:
+
+Fornecedor recomendado:
+Justificativa técnica:
+Justificativa comercial:
+Principais riscos:
+Condições recomendadas para fechamento:
+
+Etapa 5: Visão Executiva
+
+Finalize com um resumo executivo em no máximo 10 linhas contendo:
+
+Melhor fornecedor
+Economia potencial
+Principais diferenças
+Principais riscos</div>
