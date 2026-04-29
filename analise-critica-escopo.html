@@ -1,128 +1,110 @@
-<div class="titulo">Análise Comparativa de Propostas de Fornecedores</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Análise Crítica do Escopo</title>
 
-<div class="prompt" id="texto">Você é um especialista sênior em Strategic Sourcing e Procurement.
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f3f8;
+  padding: 32px;
+  color: #2f2f2f;
+}
 
-Vou anexar propostas comerciais de diferentes fornecedores referentes a um mesmo processo de sourcing.
+.card {
+  max-width: 760px;
+  margin: auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+  border: 1px solid #eee6f4;
+}
 
-Sua tarefa é analisar as propostas e gerar um Mapa Comparativo Profissional, seguindo as melhores práticas de procurement estratégico.
+.titulo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #2f2f2f;
+}
 
-Considere que o objetivo é apoiar uma decisão de award baseada em valor total, TCO, não apenas preço.
+.prompt {
+  background: #faf9fb;
+  border: 1px solid #e6ddec;
+  border-radius: 16px;
+  padding: 20px;
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
 
-Etapa 1: Normalização das Propostas
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-Leia todos os documentos anexados e identifique:
+button {
+  background: #7757A6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
 
-Nome do fornecedor
-Escopo ofertado
-Itens cotados
-Preços
-Condições comerciais
-Prazo de entrega
-Condições de pagamento
-Garantias
-Serviços incluídos
-Exclusões
-Premissas
-Validade da proposta
+button:hover {
+  background: #664894;
+  transform: translateY(-1px);
+}
 
-Normalize as informações para permitir comparação direta.
+.msg {
+  display: none;
+  color: #7757A6;
+  font-weight: 700;
+  font-size: 14px;
+}
+</style>
+</head>
 
-Se houver lacunas ou ambiguidades, liste como:
+<body>
 
-"Pontos que precisam de esclarecimento"
+<div class="card">
+  <div class="titulo">Análise Crítica do Escopo</div>
 
-Etapa 2: Mapa Comparativo Side-by-Side
+  <div class="prompt" id="texto">Aja como um especialista sênior em compras, com foco em identificar excessos, requisitos não essenciais e oportunidades de simplificação que mantenham a funcionalidade necessária ao menor custo total possível.
 
-Monte uma tabela comparativa contendo:
+Realize uma análise crítica das especificações do [produto ou serviço] apresentadas pelo departamento solicitante. Avalie se todos os requisitos técnicos são realmente necessários para a funcionalidade final.
 
-Condições Comerciais:
-Preço Total
-Preço Unitário
-Impostos
-Frete
-Condição de pagamento
-Reajuste
-Validade
-Lead time
+Identifique pontos que podem ser simplificados, substituídos ou padronizados sem comprometer a qualidade ou o desempenho. Indique requisitos que geram custos adicionais desnecessários. Sugira alternativas técnicas, materiais ou de design que possam reduzir custos e/ou prazos de entrega.
 
-Escopo Técnico:
-Aderência ao escopo
-Diferenças técnicas
-Serviços incluídos
-Serviços excluídos
-Garantias
-Riscos identificados
+Apresente uma tabela comparativa entre a especificação atual e a proposta otimizada, destacando as mudanças e seus impactos estimados. Inclua recomendações para alinhamento com as partes interessadas internas e possíveis ajustes no processo para evitar especificações excessivas no futuro. Compare com as melhores práticas de empresas semelhantes no mercado e priorize insights acionáveis para a tomada de decisão.</div>
 
-Avaliação Qualitativa:
+  <div class="acoes">
+    <button onclick="copiar()">Copiar prompt</button>
+    <span class="msg" id="msg">Copiado!</span>
+  </div>
+</div>
 
-Avalie cada fornecedor de 1 a 5 em:
+<script>
+function copiar() {
+  const texto = document.getElementById("texto").innerText;
+  navigator.clipboard.writeText(texto);
 
-Competitividade de preço
-Aderência técnica
-Risco comercial
-Prazo de entrega
-Clareza da proposta
+  const msg = document.getElementById("msg");
+  msg.style.display = "inline";
 
-Explique brevemente cada nota.
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 1800);
+}
+</script>
 
-Análise de TCO:
-
-Sempre que possível estime:
-
-Custo total de aquisição
-Custos adicionais potenciais
-Riscos financeiros
-Custos logísticos
-Custos operacionais associados
-
-Explique as premissas utilizadas.
-
-Etapa 3: Insights Estratégicos
-
-Apresente:
-
-Principais diferenças entre fornecedores
-Diferenças relevantes de preço
-Diferenças de escopo
-Diferenças de risco
-Diferenças comerciais
-
-Liste os riscos identificados:
-
-Riscos técnicos
-Riscos comerciais
-Riscos de prazo
-Riscos contratuais
-
-Identifique oportunidades de negociação:
-
-Onde há espaço para redução de preço
-Onde condições podem ser melhoradas
-Onde há desalinhamento competitivo
-
-Etapa 4: Recomendação de Award
-
-Apresente:
-
-Ranking dos fornecedores
-Melhor proposta justificada
-Melhor proposta em preço
-Melhor proposta em valor, TCO
-Recomendação final
-
-Formato:
-
-Fornecedor recomendado:
-Justificativa técnica:
-Justificativa comercial:
-Principais riscos:
-Condições recomendadas para fechamento:
-
-Etapa 5: Visão Executiva
-
-Finalize com um resumo executivo em no máximo 10 linhas contendo:
-
-Melhor fornecedor
-Economia potencial
-Principais diferenças
-Principais riscos</div>
+</body>
+</html>
