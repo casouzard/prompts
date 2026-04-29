@@ -1,16 +1,97 @@
-<div class="titulo">Análise Comparativa de Propostas de Fornecedores</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Análise Comparativa de Propostas de Fornecedores</title>
 
-<div class="prompt" id="texto">Você é um especialista sênior em Strategic Sourcing e Procurement.
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f3f8;
+  padding: 32px;
+  color: #2f2f2f;
+}
+
+.card {
+  max-width: 760px;
+  margin: auto;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+  border: 1px solid #eee6f4;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.prompt {
+  background: #faf9fb;
+  border: 1px solid #e6ddec;
+  border-radius: 16px;
+  padding: 20px;
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button {
+  background: #7757A6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #664894;
+  transform: translateY(-1px);
+}
+
+.msg {
+  display: none;
+  color: #7757A6;
+  font-weight: 700;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="titulo">Análise Comparativa de Propostas de Fornecedores</div>
+
+  <div class="prompt" id="texto">Contexto:
+
+Você é um especialista sênior em Strategic Sourcing e Procurement.
 
 Vou anexar propostas comerciais de diferentes fornecedores referentes a um mesmo processo de sourcing.
 
 Sua tarefa é analisar as propostas e gerar um Mapa Comparativo Profissional, seguindo as melhores práticas de procurement estratégico.
 
-Considere que o objetivo é apoiar uma decisão de award baseada em valor total, TCO, não apenas preço.
+Considere que o objetivo é apoiar uma decisão de award baseada em valor total (TCO), não apenas preço.
 
-Etapa 1: Normalização das Propostas
+Etapa 1 – Normalização das Propostas
 
-Leia todos os documentos anexados e identifique:
+Leia todos os documentos anexados e:
+
+Identifique:
 
 Nome do fornecedor
 Escopo ofertado
@@ -27,15 +108,17 @@ Validade da proposta
 
 Normalize as informações para permitir comparação direta.
 
-Se houver lacunas ou ambiguidades, liste como:
+Se houver lacunas ou ambiguidades, liste-as como:
 
 "Pontos que precisam de esclarecimento"
 
-Etapa 2: Mapa Comparativo Side-by-Side
+Etapa 2 – Mapa Comparativo (Side-by-Side)
 
 Monte uma tabela comparativa contendo:
 
-Condições Comerciais:
+1 – Condições Comerciais
+
+Critério | Fornecedor A | Fornecedor B | Fornecedor C
 Preço Total
 Preço Unitário
 Impostos
@@ -45,7 +128,9 @@ Reajuste
 Validade
 Lead time
 
-Escopo Técnico:
+2 – Escopo Técnico
+
+Critério | Fornecedor A | Fornecedor B | Fornecedor C
 Aderência ao escopo
 Diferenças técnicas
 Serviços incluídos
@@ -53,7 +138,7 @@ Serviços excluídos
 Garantias
 Riscos identificados
 
-Avaliação Qualitativa:
+3 – Avaliação Qualitativa
 
 Avalie cada fornecedor de 1 a 5 em:
 
@@ -65,7 +150,7 @@ Clareza da proposta
 
 Explique brevemente cada nota.
 
-Análise de TCO:
+4 – Análise de TCO
 
 Sempre que possível estime:
 
@@ -75,39 +160,44 @@ Riscos financeiros
 Custos logísticos
 Custos operacionais associados
 
-Explique as premissas utilizadas.
+Explique premissas utilizadas.
 
-Etapa 3: Insights Estratégicos
+Etapa 3 – Insights Estratégicos
 
 Apresente:
 
-Principais diferenças entre fornecedores
+Principais Diferenças Entre Fornecedores
+
 Diferenças relevantes de preço
 Diferenças de escopo
 Diferenças de risco
 Diferenças comerciais
 
-Liste os riscos identificados:
+Riscos Identificados
+
+Liste:
 
 Riscos técnicos
 Riscos comerciais
 Riscos de prazo
 Riscos contratuais
 
-Identifique oportunidades de negociação:
+Oportunidades de Negociação
+
+Identifique:
 
 Onde há espaço para redução de preço
 Onde condições podem ser melhoradas
 Onde há desalinhamento competitivo
 
-Etapa 4: Recomendação de Award
+Etapa 4 – Recomendação de Award
 
 Apresente:
 
 Ranking dos fornecedores
-Melhor proposta justificada
+Melhor proposta (justificada)
 Melhor proposta em preço
-Melhor proposta em valor, TCO
+Melhor proposta em valor (TCO)
 Recomendação final
 
 Formato:
@@ -118,7 +208,7 @@ Justificativa comercial:
 Principais riscos:
 Condições recomendadas para fechamento:
 
-Etapa 5: Visão Executiva
+Etapa 5 – Visão Executiva
 
 Finalize com um resumo executivo em no máximo 10 linhas contendo:
 
@@ -126,3 +216,26 @@ Melhor fornecedor
 Economia potencial
 Principais diferenças
 Principais riscos</div>
+
+  <div class="acoes">
+    <button onclick="copiar()">Copiar prompt</button>
+    <span class="msg" id="msg">Copiado!</span>
+  </div>
+</div>
+
+<script>
+function copiar() {
+  const texto = document.getElementById("texto").innerText;
+  navigator.clipboard.writeText(texto);
+
+  const msg = document.getElementById("msg");
+  msg.style.display = "inline";
+
+  setTimeout(() => {
+    msg.style.display = "none";
+  }, 1800);
+}
+</script>
+
+</body>
+</html>
