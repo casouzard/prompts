@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Análise Comparativa de Propostas</title>
+
+<style>
+body { font-family: Arial; background:#f5f5f5; padding:30px; }
+.card {
+  max-width:700px; margin:auto; background:white;
+  padding:20px; border-radius:16px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+.titulo { font-size:20px; font-weight:bold; margin-bottom:15px; }
+.prompt {
+  background:#fafafa; border:1px solid #ddd;
+  border-radius:10px; padding:15px;
+  white-space:pre-wrap; margin-bottom:15px;
+}
+button {
+  background:#FE7BA9; color:white;
+  border:none; padding:10px 16px;
+  border-radius:10px; cursor:pointer; font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="titulo">Análise Comparativa de Propostas</div>
+
+  <div class="prompt" id="texto">
+Você é um especialista sênior em Strategic Sourcing e Procurement.
+
+Analise propostas comerciais de diferentes fornecedores referentes a um mesmo processo de sourcing.
+
+Gere um mapa comparativo profissional considerando:
+
+- Preço total e unitário
+- Condições comerciais
+- Escopo técnico
+- Serviços incluídos e excluídos
+- Garantias
+- Riscos
+- Prazo de entrega
+
+Inclua avaliação qualitativa, análise de TCO, riscos identificados e oportunidades de negociação.
+
+Finalize com recomendação de award e resumo executivo.
+  </div>
+
+  <button onclick="copiar()">Copiar prompt</button>
+</div>
+
+<script>
+function copiar() {
+  const texto = document.getElementById("texto").innerText;
+  navigator.clipboard.writeText(texto);
+  alert("Prompt copiado!");
+}
+</script>
+
+</body>
+</html>
